@@ -31,7 +31,7 @@ public class Lab4_ByronLemuz {
             opc = entrada.nextInt();
             switch (opc) {
                 case 1:
-                    falloutword():
+                    
                     break;
                 
                 case 2:
@@ -46,9 +46,7 @@ public class Lab4_ByronLemuz {
       }
     }
     
-public static void word(String[]palabras){
-      
-    }
+
   public static void Rodatcripne(String[]palabras){
     Scanner entrada = new Scanner(System.in);
     int contraseña;
@@ -85,5 +83,21 @@ public static void word(String[]palabras){
                     }
 
 }}
+public static void alpha(string palabras) {
+        String cadenas[] = { "Laboratorio", "Laboratorio 4", "H0la", "Hola_mundo", "java" };
+        for (String cadena : cadenas) {
+            System.out.printf(" '%s'.  %b\n", cadena, contieneSoloLetras(cadena));
+        }
+    }
 
-   
+    public static boolean contieneSoloLetras(String cadena) {
+        for (int x = 0; x < cadena.length(); x++) {
+            char c = cadena.charAt(x);
+            // Si no está entre a y z, ni entre A y Z, ni es un espacio
+            if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == ' ')) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
